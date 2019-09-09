@@ -41,7 +41,7 @@ class CaesarCipherTest {
     @Test
     void testRightShift() {
         for (int i = 0; i>=-26; i--) {
-            caesar.setKey(i+26);
+            caesar.setKey(i);
             assertEquals(cipherText[i+26], caesar.encode(plaintext));
             assertEquals(plaintext, caesar.decode(cipherText[i+26]));
         }
@@ -55,5 +55,11 @@ class CaesarCipherTest {
             assertEquals(plaintext, caesar.decode(cipherText[i]));
         }
     }
+
+//    @Test
+//    void testAll() {
+//        testLeftShift();
+//        testRightShift();
+//    }
 
 }
